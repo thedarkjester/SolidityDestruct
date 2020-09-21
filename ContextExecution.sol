@@ -21,12 +21,12 @@ contract ContextExecutor {
        _recipient.transfer(1 ether); // this works direct when calling
      }
      
-     // try call thi from contract 2
+     // try call this from contract 2
      function killMeWithSendAddress(address payable _recipient) public {
        selfdestruct(_recipient);
      }
      
-      // try call thi from contract 2
+      // try call this from contract 2
       function killMeUsingSender() public {
        // ignoring adding a isOwner modifier for now
        selfdestruct(msg.sender);
